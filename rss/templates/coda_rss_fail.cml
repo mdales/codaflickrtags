@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<coda version="0.1">
+
+<div background = "#{{theme.title_background}}">
+
+<div background="#{{theme.title_background}}" foreground="#{{theme.title_colour}}" width='80%'>
+<p>CODA RSS Feed Reader</p>
+
+<p><span size="{{theme.small_text}}">It is now 
+<span foreground="#{{theme.title_date_colour}}"><date format="%I:%M %p on %a %d %B" /></span>
+</span>
+</p>
+</div>
+
+    <div background="#{{theme.first_post_background}}" foreground="#{{theme.first_post_title_colour}}">
+      <p>
+	<span size="{{theme.large_text}}">
+	  Sorry, we cannot show the feed <span foreground="#{{theme.first_post_description_colour}}">{{ fail_url }}</span>.
+	</span>
+      </p>
+    </div>
+
+  </div>
+
+<div xpos="-220" ypos="20" margin="0">
+<img src="{{theme.title_image}}" />
+</div>
+
+</coda>

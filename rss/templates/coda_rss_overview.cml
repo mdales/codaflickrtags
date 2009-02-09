@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<coda version="0.1">
+
+<div background="#ddddcc" foreground="#000000" margin="0">
+<div xpos="0" ypos="0" width="100%" height="100%" margin="0">
+<img src="http://camvine.com/static/paperframe.png" width="100%" height="100%" />
+</div>
+
+{% for image in images %}
+<div xpos="{{image.x|add:16}}" ypos="{{image.y|add:16}}" height="{{image.image.height}}" width="{{image.image.width}}" background="#505050" />
+
+<div margin="0" width="280" height="280" xpos="{{image.x|add:12}}" ypos="{{image.y|add:12}}">
+    {{ image.image.to_cml|safe }}
+</div>
+{% endfor %}
+</div>
+
+<div xpos="-240" ypos="40" margin="0">
+<img src="/images/camvissmall_new.png" />
+</div>
+
+</coda>
